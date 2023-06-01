@@ -12,7 +12,7 @@ import { TodoItem } from "./todoItem";
 // O decorador @Component é usado para definir as metadados do componente. Aqui, estamos definindo o 
 // seletor do componente como 'app-root', o que significa que ele será usado como uma tag <app-root> no arquivo HTML. Além disso, estamos especificando o arquivo de modelo do componente como './app.component.html' e os arquivos de estilo como './app.component.css'.
 export class AppComponent {
-  private list = new TodoList("Bob", [
+  private list = new TodoList("Caio", [
     new TodoItem("Go for run",),
     new TodoItem("Get flowers"),
     new TodoItem("Collect tickets"),
@@ -25,7 +25,14 @@ export class AppComponent {
       .filter(item => !item.complete).length;
   }
   get items(): readonly TodoItem[] {
+    // Esta linha define um getter chamado items que retorna um array de objetos do tipo TodoItem.
+    //  O getter é uma função especial que é executada quando a propriedade items é acessada.
     return this.list.items.filter(item => this.showComplete || !item.complete);
+    // Esta linha retorna o resultado da filtragem dos itens da lista de tarefas (this.list.items).
+    //  A função filter é usada para percorrer cada item da lista e retornar apenas aqueles que atendem às condições definidas na função de filtro.
+    // Essa é a função de filtro que é aplicada a cada item da lista. A condição do filtro é definida como this.showComplete || !item.complete.
+    //  Isso significa que o item será incluído na lista final se this.showComplete for verdadeiro
+      // (indicando que as tarefas concluídas devem ser exibidas) ou se item.complete for falso (indicando que a tarefa não foi concluída).
     }
     addItem(newItem: string) {
       if (newItem != "") {

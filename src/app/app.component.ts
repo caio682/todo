@@ -25,8 +25,14 @@ export class AppComponent {
       .filter(item => !item.complete).length;
   }
   get items(): readonly TodoItem[] {
-    return this.list.items.filter(item => !item.complete);
+    return this.list.items.filter(item => this.showComplete || !item.complete);
     }
+    addItem(newItem: string) {
+      if (newItem != "") {
+      this.list.addItem(newItem);
+      }
+      }
+      showComplete: boolean = false;
 }
   // Propriedade list: É uma instância da classe TodoList, que recebe o nome "Bob" e uma lista de itens de tarefas
   // (TodoItem). Esses itens de tarefas são inicializados com descrições e um valor booleano opcional para indicar

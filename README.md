@@ -2,7 +2,9 @@
 
 This code is an implementation of a To Do List in Angular using Material Design.
 This code was created through the study of the book Pro Angular 5th edition in which it brings this initial example so that we can understand the initial structure of angular as its components and its folder structures.
-contact : https://www.linkedin.com/in/caioal/
+
+contact : 
+https://www.linkedin.com/in/caioal/
 https://www.instagram.com/caio.a.l/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.

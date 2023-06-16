@@ -6,3 +6,15 @@
 .inputContainer { margin: 15px 15px 5px }
 .addButton { margin: 5px }
 .toggleContainer { margin: 15px; display: flex }
+.type-pills {
+    margin-top: 5px;
+  }
+  
+  .mat-badge {
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
